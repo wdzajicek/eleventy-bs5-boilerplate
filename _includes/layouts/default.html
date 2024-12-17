@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <!-- preloads and preconnections -->
+   <link rel="preload" as="style" href="{{page.baseurl}}assets/js/dist/bootstrap{% if hash %}.{{ hash.value }}{% endif %}.css">
+  <link rel="preload" as="style" href="{{page.baseurl}}assets/js/dist/main{% if hash %}.{{ hash.value }}{% endif %}.css">
+  <link rel="preload" as="script" href="{{ page.baseurl }}assets/js/dist/main{% if hash %}.{{ hash.value }}{% endif %}.bundle.js">
+  <!-- stylesheets -->
+   <link rel="stylesheet" href="{{page.baseurl}}assets/js/dist/bootstrap{% if hash %}.{{ hash.value }}{% endif %}.css">
+  <link rel="stylesheet" href="{{page.baseurl}}assets/js/dist/main{% if hash %}.{{ hash.value }}{% endif %}.css">
+</head>
+<body>
+  {% include 'partials/nav.html' %}
+  <main class="container">
+    <div class="row">
+      <div class="col">
+        {{ content }}
+      </div>
+    </div>
+  </main>
+  <!-- js -->
+  <script src="{{ page.baseurl }}assets/js/dist/main{% if hash %}.{{ hash.value }}{% endif %}.bundle.js" defer></script>
+</body>
+</html>
