@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="{{page.baseurl}}assets/js/dist/main{% if hash %}.{{ hash.value }}{% endif %}.css">
 </head>
 <body>
-  {% include 'partials/nav.html' %}
+  {% include 'nav.html' %}
   <main class="container">
     <div class="row">
       <div class="col">
@@ -21,6 +21,7 @@
       </div>
     </div>
   </main>
+  {% include 'footer.html' %}
   <!-- js -->
   <script src="{{ page.baseurl }}assets/js/dist/main{% if hash %}.{{ hash.value }}{% endif %}.bundle.js" defer></script>
 </body>

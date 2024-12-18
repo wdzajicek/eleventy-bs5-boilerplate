@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeleventy_bs5_boilerplate=self.webpackChunkeleventy_bs5_boilerplate||[]).push([[649],{649:function(e,t){const n=document.getElementById("year");t.default=function(){const e=new Date;n.innerHTML=`${e.getFullYear()}`}}}]);
