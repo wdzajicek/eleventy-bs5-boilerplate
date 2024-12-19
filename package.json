@@ -22,6 +22,7 @@
   "scripts": {
     "production": "run-p 11ty-production webpack-production",
     "development": "run-p 11ty-development webpack-dev",
+    "pages": "MY_ENVIRONMENT=pages npx @11ty/eleventy",
     "11ty-production": "sleep 2 && npx @11ty/eleventy --serve",
     "11ty-development": "sleep 2 && npx @11ty/eleventy --serve",
     "webpack-production": "npx webpack --watch --node-env production",
